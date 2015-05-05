@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @dinner.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dinner.description %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @dinner.date %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @dinner.image %>
+</p>
+
+<%= link_to 'Edit', edit_dinner_path(@dinner) %> |
+<%= link_to 'Back', dinners_path %>
+
+<!-- TESTER BELOW -->
+<ul class="nav nav-pills">
+  <li><%= link_to 'New Dinner', new_dinner_path  %></li>
+  <li><%= link_to('Delete Dinner', @dinner, :method => :delete, :confirm => 'Are you sure?') %></li>
+  <li><%= link_to('Edit Dinner', edit_dinner_path(@dinner)) %></li>
+</ul>
+
+<div class="row">
+     <div class="col-md-4">
+      <p class="lead"><%= link_to(@dinner.title, @dinner) %></p>
+      <p class="text-info"><%= @dinner.description %></p>
+      <p class="text-info"><%= @dinner.date %></p>
+    </div>
+    <div class="col-md-8">
+      <p><%= image_tag(@dinner.image) %></p>
+    </div>
+</div>
+
+<br>
+
