@@ -13,15 +13,25 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, autofocus: true, placeholder: 'First and Last' %>
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, placeholder: 'email' %>
   </div>
-  <div class="field">
-    <%= f.label :dinner_id %><br>
-    <%= f.number_field :dinner_id %>
+
+  <!-- TEST BELOW -->
+  <h3>Dinners I'd like to attent</h3>
+  <div class="row">
+    <div class="input-group">
+      <% Dinner.order(:title).each do |dinner| %>
+      <span class="input-group-addon">
+        <%= dinner.title %>
+
+        <%= check_box_tag('guest[dinner_ids][]', dinner.id, dinner.in?(@guest.dinners), {class: "checkbox inline"}) %>
+      </span>
+      <% end %>
+    </div>
   </div>
   <div class="actions">
     <%= f.submit %>

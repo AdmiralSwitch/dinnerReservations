@@ -10,10 +10,12 @@
   <%= @guest.email %>
 </p>
 
-<p>
-  <strong>Dinner:</strong>
-  <%= @guest.dinner_id %>
-</p>
+<div class="col-md-7 col-sm-7">
+The dinners should be listed below...
+ <% @guest.dinners.each do |dinner|  %>
+    <p><%= dinner.title %></p>
+ <% end %>
+</div>
 
 <%= link_to 'Edit', edit_guest_path(@guest) %> |
 <%= link_to 'Back', guests_path %>

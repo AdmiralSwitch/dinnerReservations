@@ -1,3 +1,3 @@
 class Dinner < ActiveRecord::Base
-  has_many :guests
+  has_and_belongs_to_many :guests
 end

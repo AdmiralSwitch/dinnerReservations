@@ -3,7 +3,6 @@ class CreateGuests < ActiveRecord::Migration
     create_table :guests do |t|
       t.string :name
       t.string :email
-      t.integer :dinner_id
 
       t.timestamps null: false
     end
