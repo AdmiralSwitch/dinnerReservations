@@ -1,4 +1,3 @@
 class Dinner < ActiveRecord::Base
-  has_many :categorizations
-  has_many :guests, through: :categorizations
+  has_and_belongs_to_many :guests
 end

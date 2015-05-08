@@ -1,13 +1,41 @@
-<%= simple_form_for(@guest) do |f| %>
-  <%= f.error_notification %>
-  <%= f.input :name %>
-  <%= f.input :email %>
+<%= form_for(@guest) do |f| %>
+  <% if @guest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@guest.errors.count, "error") %> prohibited this guest from being saved:</h2>
+
+      <ul>
+      <% @guest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
 
 
+  <div class="field">
+    <div class="field_head">Dinners</div>
+    <%= hidden_field_tag("guest[dinner_ids][]", nil) %>
+    <% Dinner.order(:title).each do |dinner| %>
 
-  <h3>Dinners I'd like to attent</h3>
-  <%= f.association :dinners,  as: :check_boxes %>
-  <%= f.error :base %>
-  <%= f.button :submit %>
+      <div class="row">
+        <label><%= check_box_tag('guest[dinner_ids][]', dinner.id, dinner.in?(@guest.dinners), {class: "checkbox inline"}) %>
+        <%= dinner.title %></label>
+      </div>
+
+    <% end %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 
 <% end %>

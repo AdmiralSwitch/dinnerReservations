@@ -1,6 +1,9 @@
 class GuestsController < ApplicationController
   before_action :set_guest, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @guests = Guest.order("name")
+  end
   # GET /guests
   # GET /guests.json
   def index
@@ -69,6 +72,6 @@ class GuestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guest_params
-      params.require(:guest).permit(:name, :email)
+      params.require(:guest).permit(:name, :email, {dinner_ids:[]})
     end
 end

@@ -1,6 +1,6 @@
 class Guest < ActiveRecord::Base
-  has_many :categorizations
-  has_many :dinners, through: :categorizations
+
+  has_and_belongs_to_many  :dinners
 
   validates :name, presence: true, uniqueness: true, on: :create
   validates :email, presence: true, uniqueness: true, on: :create

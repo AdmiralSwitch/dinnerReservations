@@ -20,7 +20,10 @@
 
 <h2>Current Guests</h2>
 
-
 <div class="col-md-7 col-sm-7">
-  <%= @dinner.guests.map(&:name).join(", ") %>
+  <ul>
+   <% @dinner.guests.each do |guest|  %>
+      <li><%= guest.name %></li>
+    <% end %>
+  </ul>
 </div>
