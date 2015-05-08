@@ -8,7 +8,7 @@ gem 'sqlite3' # Use sqlite3 as the database for Active Record
 gem 'sass-rails', '~> 5.0' # Use SCSS for stylesheets
 gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
 gem 'coffee-rails', '~> 4.1.0' # Use CoffeeScript for .coffee assets and views
-
+gem 'simple_form'
 
 
 

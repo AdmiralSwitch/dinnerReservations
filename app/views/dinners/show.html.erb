@@ -22,7 +22,5 @@
 
 
 <div class="col-md-7 col-sm-7">
-<% @dinner.guests.each do |guest| %>
-  <%= guest.name %>
-<% end %>
+  <%= @dinner.guests.map(&:name).join(", ") %>
 </div>

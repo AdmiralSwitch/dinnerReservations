@@ -1,33 +1,9 @@
-<%= form_for(@dinner) do |f| %>
-  <% if @dinner.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@dinner.errors.count, "error") %> prohibited this dinner from being saved:</h2>
-
-      <ul>
-      <% @dinner.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, autofocus: true, placeholder: 'Title' %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description%>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_area :image %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for(@dinner) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :date %>
+  <%= f.input :image %>
+  <%= f.error :base %>
+  <%= f.button :submit %>
 <% end %>
