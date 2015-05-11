@@ -26,8 +26,14 @@
     <% Dinner.order(:title).each do |dinner| %>
 
       <div class="row">
-        <label><%= check_box_tag('guest[dinner_ids][]', dinner.id, dinner.in?(@guest.dinners), {class: "checkbox inline"}) %>
-        <%= dinner.title %></label>
+      <% people = dinner.guests.count %>
+            <% if people >= 3 %>
+              <label><%= dinner.title %></label>
+              <%= "Sorry, No seats left." %>
+            <% else %>
+              <label><%= check_box_tag('guest[dinner_ids][]', dinner.id, dinner.in?(@guest.dinners), {class: "checkbox inline"}) %>
+              <%= dinner.title %></label>
+            <% end %>
       </div>
 
     <% end %>
