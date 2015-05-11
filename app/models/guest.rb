@@ -4,4 +4,8 @@ class Guest < ActiveRecord::Base
 
   validates :name, presence: true, uniqueness: true, on: :create
   validates :email, presence: true, uniqueness: true, on: :create
+
+
+
+
 end
