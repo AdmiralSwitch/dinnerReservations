@@ -1,28 +1,20 @@
-== README
+== Reservations
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To get this up and running, just clone this repo. cd into the directory rake db:migrate, rake db:seed, rails start, then it should be up on local host:3000.
 
-Things you may want to cover:
+Features I'm working on:
 
-* Ruby version
+* <no>Dinners & Guests CRUD</no>
 
-* System dependencies
+* <no>Join Table (has_many :through)</no>
 
-* Configuration
+* <no>Limit # of guests per dinner.</no>
 
-* Database creation
+* Authentication for admin.
 
-* Database initialization
+* Email guests with calendar event.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Front-End.
 
 * ...
-
-
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.

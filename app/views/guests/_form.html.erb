@@ -27,7 +27,7 @@
 
       <div class="row">
       <% people = dinner.guests.count %>
-            <% if people >= 8 %>
+            <% if people >= 3 %>
               <label><%= dinner.title %></label>
               <%= "Sorry, No seats left." %>
             <% else %>

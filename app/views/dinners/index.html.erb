@@ -17,9 +17,10 @@
           <div class="partysize">
             <%= image_tag(dinner.image) %>
             <% people = dinner.guests.count %>
-            <% if people >= 8 %>
-              <%= "FULL" %>
+            <% if people >= 3 %>
+              <%= "SOLD OUT" %>
             <% else %>
+              <%='Guests: ' %>
               <%= people %>
             <% end %>
           </div>
