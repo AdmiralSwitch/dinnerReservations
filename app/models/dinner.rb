@@ -1,6 +1,6 @@
 class Dinner < ActiveRecord::Base
-  has_and_belongs_to_many :guests
-
+  has_many :parties
+  has_many :guests, through: :parties
 
 
 end
