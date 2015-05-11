@@ -1,14 +1,14 @@
-== Reservations
+**Reservations**
 
 To get this up and running, just clone this repo. cd into the directory rake db:migrate, rake db:seed, rails start, then it should be up on local host:3000.
 
 Features I'm working on:
 
-* <no>Dinners & Guests CRUD</no>
+* ~~Dinners & Guests CRUD~~
 
-* <no>Join Table (has_many :through)</no>
+* ~~Join Table (has_many :through)~~
 
-* <no>Limit # of guests per dinner.</no>
+* ~~Limit # of guests per dinner.~~
 
 * Authentication for admin.
 
