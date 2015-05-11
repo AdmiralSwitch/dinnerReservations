@@ -27,12 +27,11 @@
 
       <div class="row">
       <% people = dinner.guests.count %>
-            <% if people >= 3 %>
+            <% if people >= 8 %>
               <label><%= dinner.title %></label>
               <%= "Sorry, No seats left." %>
             <% else %>
-              <label><%= check_box_tag('guest[dinner_ids][]', dinner.id, dinner.in?(@guest.dinners), {class: "checkbox inline"}) %>
-              <%= dinner.title %></label>
+              <label><%= dinner.title %><%= check_box_tag('guest[dinner_ids][]', dinner.id, dinner.in?(@guest.dinners), {class: "checkbox inline"}) %></label>
             <% end %>
       </div>
 

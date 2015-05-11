@@ -13,10 +13,11 @@
 
         </div>
         <div class="col-md-7 col-sm-7 col-xs-7">
-          <%= image_tag(dinner.image) %>
+
           <div class="partysize">
+            <%= image_tag(dinner.image) %>
             <% people = dinner.guests.count %>
-            <% if people >= 3 %>
+            <% if people >= 8 %>
               <%= "FULL" %>
             <% else %>
               <%= people %>
