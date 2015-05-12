@@ -1,22 +1,4 @@
 GIT
-  remote: git://github.com/activerecord-hackery/polyamorous.git
-  revision: 6e2e1cc5d0b53e4d8f02aa5286e6d11aa91f5ac3
-  specs:
-    polyamorous (1.2.0)
-      activerecord (>= 3.0)
-
-GIT
-  remote: git://github.com/activerecord-hackery/ransack.git
-  revision: c09aa177953deb27e28179f55844ced0489613b4
-  specs:
-    ransack (1.6.6)
-      actionpack (>= 3.0)
-      activerecord (>= 3.0)
-      activesupport (>= 3.0)
-      i18n
-      polyamorous (~> 1.2)
-
-GIT
   remote: git://github.com/gregbell/active_admin.git
   revision: add0928290f38545ba9cad3d183e886838ff9962
   specs:
@@ -33,13 +15,6 @@ GIT
       rails (>= 3.2, < 5.0)
       ransack (~> 1.3)
       sass-rails
-
-GIT
-  remote: git://github.com/justinfrench/formtastic.git
-  revision: cdb3e81e34d0512b28761055ac7834def98870cd
-  specs:
-    formtastic (3.2.0.pre)
-      actionpack (>= 3.2.13)
 
 GEM
   remote: https://rubygems.org/
@@ -115,6 +90,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.5.2)
+    formtastic (3.1.3)
+      actionpack (>= 3.2.13)
     formtastic_i18n (0.4.1)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
@@ -152,8 +129,8 @@ GEM
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
     pg (0.18.1)
-    puma (2.11.2)
-      rack (>= 1.1, < 2.0)
+    polyamorous (1.2.0)
+      activerecord (>= 3.0)
     rack (1.6.0)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -182,6 +159,12 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
+    ransack (1.6.6)
+      actionpack (>= 3.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      i18n
+      polyamorous (~> 1.2)
     rdoc (4.2.0)
       json (~> 1.4)
     responders (2.1.0)
@@ -235,14 +218,13 @@ DEPENDENCIES
   cocoon
   coffee-rails (~> 4.1.0)
   devise
-  formtastic!
+  formtastic
   jbuilder (~> 2.0)
   jquery-rails
   pg
-  polyamorous!
-  puma
+  polyamorous
   rails (= 4.2.0)
-  ransack!
+  ransack
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form
