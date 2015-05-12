@@ -24,13 +24,15 @@ gem 'better_errors' # the error page is a little easier to read
 
 
 group :development, :test do
-  gem 'pg'
+  gem 'sqlite3'
   gem 'byebug'   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'web-console', '~> 2.0'   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 end
 
-
+group :production do
+  gem 'pg'
+end
 
 gem 'puma' # for heroku deployment
 
