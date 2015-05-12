@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.1.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
@@ -11,10 +11,12 @@ gem 'coffee-rails', '~> 4.1.0' # Use CoffeeScript for .coffee assets and views
 gem 'simple_form' # Forms are easier to make.
 gem 'cocoon' # makes it easier to handle nested forms
 
+gem 'rails_12factor' # added for heroku deployment...per heroku
+
 gem 'activeadmin', github: 'gregbell/active_admin' # for creating the admin side of the app
 gem 'polyamorous' # for activeadmin
 gem 'ransack' # for activeadmin
-gem 'formtastic' # for activeadmin
+gem 'formtastic' # simpleform for activeadmin
 gem 'devise' # for activeadmin
 
 gem 'jquery-rails' # Use jquery as the JavaScript library
