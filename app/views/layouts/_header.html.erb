@@ -1,16 +1,19 @@
 <div class="row">
   <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-header">
-    <a class="navbar-brand" href="/">Suga's</a>
-  </div>
-  <div class="navbar-header navbar-right">
-  </div>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Suga's</a>
+        <ul class="nav navbar-nav">
+        <li class="active">
+        <%= link_to('Dinners', dinners_path) %></li>
+        <li><%= link_to('Guests', guests_path) %></li>
+      </ul>
+      </div>
+
+      <div class="navbar-header navbar-right">
+      <a class="navbar-brand" href="/admin">Login</a>
+    </div>
   <div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-      <li class="active">
-      <%= link_to('Dinners', dinners_path) %></li>
-      <li><%= link_to('Guests', guests_path) %></li>
-    </ul>
+
   </div>
 </nav>
 </div>

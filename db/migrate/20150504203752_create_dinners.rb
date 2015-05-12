@@ -3,6 +3,7 @@ class CreateDinners < ActiveRecord::Migration
     create_table :dinners do |t|
       t.string :title
       t.text :description
+      t.integer :seats
       t.date :date
       t.text :image
 

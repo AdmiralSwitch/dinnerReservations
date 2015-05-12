@@ -10,7 +10,9 @@ Features I'm working on:
 
 * ~~Limit # of guests per dinner.~~
 
-* Authentication for admin.
+* ~~Authentication for creating dinners~~
+  User: admin@example.com
+  Password: password
 
 * Email guests with calendar event.
 

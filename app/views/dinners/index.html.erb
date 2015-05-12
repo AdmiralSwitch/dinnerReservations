@@ -17,19 +17,13 @@
           <div class="partysize">
             <%= image_tag(dinner.image) %>
             <% people = dinner.guests.count %>
-            <% if people >= 3 %>
+            <% if people >= 8 %>
               <%= "SOLD OUT" %>
             <% else %>
               <%='Guests: ' %>
               <%= people %>
             <% end %>
           </div>
-        </div>
-
-        <div class="col-md-2 col-sm-2 col-xs-2">
-          <p><%= link_to 'Show', dinner %></p>
-          <p><%= link_to 'Edit', edit_dinner_path(dinner) %></p>
-          <p><%= link_to 'Destroy', dinner, method: :delete, data: { confirm: 'Are you sure?' } %></p>
         </div>
       </div>
     <% end %>
@@ -38,4 +32,3 @@
 
 <br>
 
-<%= link_to 'New Dinner', new_dinner_path %>

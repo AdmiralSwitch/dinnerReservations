@@ -10,11 +10,6 @@
     <p><%= image_tag(@dinner.image) %></p>
   </div>
 </div>
-<ul class="nav nav-pills">
-  <li><%= link_to 'New Dinner', new_dinner_path  %></li>
-  <li><%= link_to('Delete Dinner', @dinner, :method => :delete, :confirm => 'Are you sure?') %></li>
-  <li><%= link_to('Edit Dinner', edit_dinner_path(@dinner)) %></li>
-</ul>
 
 <br>
 
