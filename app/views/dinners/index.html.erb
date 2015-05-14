@@ -1,4 +1,15 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="toppics">
+    <div>
+      <img style="display: inline; margin: 0 5px; max-height:324px;" class="producepic" src="assets/produce.jpg" />
+      <img style="display: inline; margin: 0 5px; max-width:324px;" class="wcclogo" src="assets/wcclogo.png" />
+    </div>
+  </div>
+</div>
+
+
+
 
 <h1>Listing Dinners</h1>
 
@@ -15,7 +26,6 @@
         <div class="col-md-7 col-sm-7 col-xs-7">
 
           <div class="partysize">
-            <%= image_tag(dinner.image) %>
             <% people = dinner.guests.count %>
             <% if people >= 8 %>
               <%= "SOLD OUT" %>
