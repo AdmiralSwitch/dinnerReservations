@@ -8,12 +8,20 @@
   z-index: 25
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  width: auto\9; /* ie8 */
+.headerpics{
+  display: inline;
+  height: 250px;
+  width: 500px;
+  position: fixed
 }
 
+img {
+  height: 250px;
+}
+
+.dinenrContainer {
+  padding-top: 250px;
+}
 .container {
 
 }

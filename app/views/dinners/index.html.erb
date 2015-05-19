@@ -1,43 +1,47 @@
 <p id="notice"><%= notice %></p>
-<div class="row">
-  <div class="toppics">
-    <div>
-      <img style="display: inline; margin: 0 5px; max-height:324px;" class="producepic" src="assets/produce.jpg" />
-      <img style="display: inline; margin: 0 5px; max-width:324px;" class="wcclogo" src="assets/wcclogo.png" />
+<div class="headerpics">
+  <div class="row">
+    <div class="toppics">
+      <div>
+        <img class="tomatoes" src="assets/produce.jpg" />
+        <img src="assets/wcclogo.png" />
+      </div>
     </div>
   </div>
 </div>
 
 
 
+<div class="dinenrContainer">
+  <h1>Listing Dinners</h1>
 
-<h1>Listing Dinners</h1>
+  <div>
+    <div class="dinnerRow">
+      <% @dinners.each do |dinner| %>
+        <div id="dinnerList" class="row">
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <p class="lead"> Title: <%= link_to(dinner.title, dinner, {:class=> "dinner_link_style"}) %></p>
+            <p class="text-warning"> Date: <%= dinner.date %></p>
+            <p class="text-info"> Details: <%= dinner.description %></p>
 
-<div>
-  <div class="dinnerRow">
-    <% @dinners.each do |dinner| %>
-      <div id="dinnerList" class="row">
-        <div class="col-md-3 col-sm-3 col-xs-3">
-          <p class="lead"> Title: <%= link_to(dinner.title, dinner, {:class=> "dinner_link_style"}) %></p>
-          <p class="text-warning"> Date: <%= dinner.date %></p>
-          <p class="text-info"> Details: <%= dinner.description %></p>
+          </div>
+          <div class="col-md-7 col-sm-7 col-xs-7">
 
-        </div>
-        <div class="col-md-7 col-sm-7 col-xs-7">
-
-          <div class="partysize">
-            <% people = dinner.guests.count %>
-            <% if people >= 8 %>
-              <%= "SOLD OUT" %>
-            <% else %>
-              <%='Guests: ' %>
-              <%= people %>
-            <% end %>
+            <div class="partysize">
+              <% people = dinner.guests.count %>
+              <% if people >= 8 %>
+                <%= "SOLD OUT" %>
+              <% else %>
+                <%='Guests: ' %>
+                <%= people %>
+              <% end %>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
+  <a href="/guests">Sign me up.</a>
 </div>
 
 <br>
