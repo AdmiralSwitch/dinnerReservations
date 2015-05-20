@@ -11,23 +11,37 @@
 .headerpics{
   display: inline;
   height: 250px;
-  width: 500px;
-  position: fixed
+  width: 750px;
+  position: fixed;
+  z-index: 10;
 }
 
 img {
   height: 250px;
 }
 
-.dinenrContainer {
-  padding-top: 250px;
+#dinnerInfo {
+  height: 500px;
+  background-color: rgba(0,216,158,.5);
+  top: 250px;
 }
+
+#dinenrContainer {
+  height: 500px;
+  background-color: rgba(2,196,255,1);
+  top: 250px;
+}
+
+
+
 .container {
 
 }
 
 
 .dinnerRow {
-  border-top: 50px;
+  padding-top: 10px;
+  border: 15px 5px 5px 5px;
+  border-color: rgba(86,204,0,1);
   background-color: rgba(212,224,220,.5);
 }

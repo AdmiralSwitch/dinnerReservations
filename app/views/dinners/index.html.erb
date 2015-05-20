@@ -1,41 +1,53 @@
 <p id="notice"><%= notice %></p>
+
+<!-- THIS IS WHERE THE IMAGES ARE -->
 <div class="headerpics">
   <div class="row">
     <div class="toppics">
-      <div>
-        <img class="tomatoes" src="assets/produce.jpg" />
-        <img src="assets/wcclogo.png" />
-      </div>
+      <img class="col-xs-8 col-md-8" src="assets/produce.jpg" />
+      <img class="col-xs-4 col-md-4" src="assets/wcclogo.png" />
     </div>
   </div>
 </div>
 
+<!-- GENERAL INFO ABOUT DINNERS -->
+<div id="dinnerInfo" class="col-xs-8 col-md-8">
+  <h1>Garden to Table Dinner Series</h1>
+  <h3>a benefit for women's Community Clinic</h3>
+  <div>
+    Family style dinners inspired by backyard garden.
+    <p>Location: 1014 57th St. Oakland, CA. 94608</p>
+  </div>
 
+</div>
 
-<div class="dinenrContainer">
-  <h1>Listing Dinners</h1>
-
+<!-- LIST OF DINNERS AND ATTENDEES -->
+<div id="dinenrContainer" class="col-xs-4 col-md-4">
+  <h2>Listing Dinners</h2>
   <div>
     <div class="dinnerRow">
       <% @dinners.each do |dinner| %>
         <div id="dinnerList" class="row">
           <div class="col-md-3 col-sm-3 col-xs-3">
-            <p class="lead"> Title: <%= link_to(dinner.title, dinner, {:class=> "dinner_link_style"}) %></p>
-            <p class="text-warning"> Date: <%= dinner.date %></p>
-            <p class="text-info"> Details: <%= dinner.description %></p>
+            <span><%= link_to(dinner.title, dinner, {:class=> "dinner_link_style"}) %>
+            <div id="date"> Date: <%= dinner.date %></div>
+
+            </span>
+
+<!--             <p class="text-info"> Details: <%= dinner.description %></p> -->
 
           </div>
           <div class="col-md-7 col-sm-7 col-xs-7">
 
-            <div class="partysize">
+            <p class="partysize">
               <% people = dinner.guests.count %>
               <% if people >= 8 %>
                 <%= "SOLD OUT" %>
               <% else %>
-                <%='Guests: ' %>
-                <%= people %>
+                <p><%='Guests: ' %>
+                <%= people %></p>
               <% end %>
-            </div>
+            </p>
           </div>
         </div>
       <% end %>
