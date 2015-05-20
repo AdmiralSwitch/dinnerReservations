@@ -19,6 +19,9 @@ gem 'ransack' # for activeadmin
 gem 'formtastic' # simpleform for activeadmin
 gem 'devise' # for activeadmin
 
+gem 'bootstrap-sass', '~> 3.2.0' # bootstrap gem.
+gem 'autoprefixer-rails' # automatically adds the proper vendor prefixes to your CSS code when it is compiled.
+
 gem 'jquery-rails' # Use jquery as the JavaScript library
 gem 'turbolinks' # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'jbuilder', '~> 2.0' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
