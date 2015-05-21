@@ -13,7 +13,7 @@
 <!-- GENERAL INFO ABOUT DINNERS -->
 <div id="dinnerInfo" class="col-xs-8 col-md-8">
   <h1>Garden to Table Dinner Series</h1>
-  <h3>a benefit for women's Community Clinic</h3>
+  <h3>A benefit for Women's Community Clinic</h3>
   <div>
     Family style dinners inspired by backyard garden.
     <p>Location: 1014 57th St. Oakland, CA. 94608</p>
@@ -23,7 +23,7 @@
 
 <!-- LIST OF DINNERS AND ATTENDEES -->
 <div id="dinenrContainer" class="col-xs-4 col-md-4">
-  <h2>Listing Dinners</h2>
+  <h2>Dinners</h2>
   <div>
     <div class="dinnerRow">
       <% @dinners.each do |dinner| %>
@@ -31,11 +31,7 @@
           <div class="col-md-3 col-sm-3 col-xs-3">
             <span><%= link_to(dinner.title, dinner, {:class=> "dinner_link_style"}) %>
             <div id="date"> Date: <%= dinner.date %></div>
-
             </span>
-
-<!--             <p class="text-info"> Details: <%= dinner.description %></p> -->
-
           </div>
           <div class="col-md-7 col-sm-7 col-xs-7">
 
@@ -53,7 +49,7 @@
       <% end %>
     </div>
   </div>
-  <a href="/guests">Sign me up.</a>
+  <a href="/guests/new">Sign me up.</a>
 </div>
 
 <br>
