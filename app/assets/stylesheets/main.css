@@ -36,9 +36,11 @@ img {
 
 
 .container {
+  width: 100%;
   padding-top: 30px;
   padding-right: 0px;
   padding-left: 0px;
+  margin: 0px;
 
 
 }
@@ -49,4 +51,8 @@ img {
   border: 15px 5px 5px 5px;
   border-color: rgba(86,204,0,1);
   background-color: rgba(212,224,220,.5);
+}
+
+.partysize {
+  text-align: left;
 }

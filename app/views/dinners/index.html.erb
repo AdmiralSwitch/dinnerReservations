@@ -5,7 +5,7 @@
   <div class="row">
     <div class="toppics">
       <img class="col-xs-8 col-md-8" src="assets/produce.jpg" />
-      <img class="col-xs-4 col-md-4" src="assets/wcclogo.png" />
+      <img class="col-xs-4 col-md-4" src="http://www.fillmorestreetsf.com/wp-content/blogs.dir/198/files/2011/11/womens-community-clinic.png" />
     </div>
   </div>
 </div>
@@ -27,29 +27,29 @@
   <div>
     <div class="dinnerRow">
       <% @dinners.each do |dinner| %>
-        <div id="dinnerList" class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3">
-            <span><%= link_to(dinner.title, dinner, {:class=> "dinner_link_style"}) %>
+        <table id="dinnerList" class="row">
+          <tr class="col-md-3 col-sm-3 col-xs-3">
+            <div><%= link_to(dinner.title, dinner, {:class=> "dinner_link_style"}) %></div>
             <div id="date"> Date: <%= dinner.date %></div>
-            </span>
-          </div>
-          <div class="col-md-7 col-sm-7 col-xs-7">
 
-            <p class="partysize">
+          </tr>
+          <!-- <div class="col-md-7 col-sm-7 col-xs-7"> -->
+
+            <tr class="partysize">
               <% people = dinner.guests.count %>
               <% if people >= 8 %>
                 <%= "SOLD OUT" %>
               <% else %>
-                <p><%='Guests: ' %>
-                <%= people %></p>
+                <tr><%='Guests: ' %>
+                <%= people %></tr>
               <% end %>
-            </p>
-          </div>
-        </div>
+            </tr>
+          <!-- </div> -->
+        </table>
       <% end %>
     </div>
   </div>
-  <a class="btn btn-primary btn-lg" href="/guests/new">Sign me up.</a>
+  <a class="btn btn-primary btn-lg" href="/guests/new">Sign up</a>
 </div>
 
 <br>
