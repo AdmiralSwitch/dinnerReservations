@@ -3,10 +3,12 @@
     background-color:#00762d;
     color:#e7ffdb;
     border-radius:0;
+
 }
 
 .navbar-custom .navbar-nav > li > a {
     color: #e7ffdb;
+    text-decoration: none;
 }
 .navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
     color: #85e542;
@@ -15,6 +17,7 @@
 .navbar-custom .navbar-brand {
   background-color: transparent;
   color: #e7ffdb;
+  text-decoration: none;
 }
 
 .navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus {
@@ -72,4 +75,8 @@ img {
 
 .partysize {
   text-align: left;
+}
+
+.dinenrContainer a > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+  text-decoration: none;
 }
