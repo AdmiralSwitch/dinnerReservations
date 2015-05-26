@@ -42,13 +42,13 @@ img {
 
 #dinnerInfo {
   height: 500px;
-  background-color: rgba(0,216,158,.5);
+  background-color: rgba(67,18,0,.2);
   top: 250px;
 }
 
 #dinenrContainer {
   height: 500px;
-  background-color: rgba(2,196,255,1);
+  background-color: rgba(67,18,0,.4);
   top: 250px;
 }
 
@@ -77,6 +77,6 @@ img {
   text-align: left;
 }
 
-.dinenrContainer a > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
-  text-decoration: none;
+a {
+  text-decoration: none !important;
 }
