@@ -46,10 +46,25 @@ img {
   top: 250px;
 }
 
+#dinnerInfo h1 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 400;
+}
+
+#dinnerInfo h3 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 100;
+}
+
 #dinenrContainer {
   height: 500px;
   background-color: rgba(67,18,0,.4);
   top: 250px;
+}
+
+#dinenrContainer h2 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 200;
 }
 
 

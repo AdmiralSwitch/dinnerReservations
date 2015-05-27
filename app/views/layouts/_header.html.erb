@@ -1,17 +1,19 @@
 
 <div class="row">
-  <nav class="navbar navbar-custom navbar-fixed-top">
-  <div class="navbar-header">
-    <a class="navbar-brand" href="/">Garden2Table</a>
+  <div class="col-xs-12 col-md-12">
+    <nav class="navbar navbar-custom navbar-fixed-top">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Garden2Table</a>
+    </div>
+    <div class="navbar-header navbar-right">
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active">
+        <li><%= link_to('Guests', guests_path) %></li>
+        <li><a class="headeralignright" href="/admin">Login</a></li>
+      </ul>
+    </div>
+  </nav>
   </div>
-  <div class="navbar-header navbar-right">
-  </div>
-  <div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-      <li class="active">
-      <li><%= link_to('Guests', guests_path) %></li>
-      <li><a class="headeralignright" href="/admin">Login</a></li>
-    </ul>
-  </div>
-</nav>
 </div>
