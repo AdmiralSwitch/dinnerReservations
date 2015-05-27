@@ -16,7 +16,7 @@ Features I'm working on:
 
 * Email guests with calendar event.
 
-* Front-End.
+* ~~Front-End.~~
 
 * ...
 <tt>rake doc:app</tt>.
