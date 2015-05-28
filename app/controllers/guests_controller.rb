@@ -31,6 +31,7 @@ class GuestsController < ApplicationController
 
     respond_to do |format|
       if @guest.save
+        UserMailer.registration_confirmation(@guest).deliver
         format.html { redirect_to @guest, notice: 'Guest was successfully created.' }
         format.json { render :show, status: :created, location: @guest }
       else

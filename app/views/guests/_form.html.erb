@@ -22,20 +22,24 @@
 
   <div class="field">
     <div class="field_head">Dinners</div>
-    <%= hidden_field_tag("guest[dinner_ids][]", nil) %>
-    <% Dinner.order(:title).each do |dinner| %>
+    <table>
+      <tbody>
+        <tr> <%= hidden_field_tag("guest[dinner_ids][]", nil) %>
+          <td><% Dinner.order(:title).each do |dinner| %></td>
 
-      <div class="row">
-      <% people = dinner.guests.count %>
-            <% if people >= 8 %>
-              <label><%= dinner.title %></label>
-              <%= "Sorry, No seats left." %>
-            <% else %>
-              <label><%= dinner.title %><%= check_box_tag('guest[dinner_ids][]', dinner.id, dinner.in?(@guest.dinners), {class: "checkbox inline"}) %></label>
-            <% end %>
-      </div>
-
-    <% end %>
+          <td>
+            <% people = dinner.guests.count %>
+              <% if people >= 8 %>
+                <label><%= dinner.title %></label>
+                    <%= "Sorry, No seats left." %>
+              <% else %>
+                <label><%= dinner.title %><%= check_box_tag('guest[dinner_ids][]', dinner.id, dinner.in?(@guest.dinners), {class: "checkbox inline"}) %></label>
+              <% end %>
+          </td>
+        <% end %>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
 
