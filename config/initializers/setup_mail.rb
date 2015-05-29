@@ -1,7 +1,7 @@
 ActionMailer::Base.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
-  :domain               => "reservationz.herokuapp.com",
+  :domain               => "garden2table.net",
   :user_name            => ENV["gmail_username"],
   :password             => ENV["gmail_password"],
   :authentication       => "plain",
