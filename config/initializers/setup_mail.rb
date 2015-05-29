@@ -1,7 +1,7 @@
 ActionMailer::Base.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
-  :domain               => "garden2table.net",
+  :domain               => "gmail.com",
   :user_name            => ENV["gmail_username"],
   :password             => ENV["gmail_password"],
   :authentication       => "plain",

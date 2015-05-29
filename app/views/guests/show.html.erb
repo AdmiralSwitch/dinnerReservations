@@ -1,23 +1,23 @@
 <div class="container">
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @guest.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @guest.name %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @guest.email %>
-</p>
+  <p>
+    <strong>Email:</strong>
+    <%= @guest.email %>
+  </p>
 
-<p>
-  <strong>My Dinners:</strong>
+  <p>
+    <strong>My Dinners:</strong>
 
-  <%= @guest.dinners.map(&:title).join(", ") %>
-</p>
+    <%= @guest.dinners.map(&:title).join(", ") %>
+  </p>
 
 
-<%= link_to 'Edit', edit_guest_path(@guest) %> |
-<%= link_to 'Back', guests_path %>
+  <%= link_to 'Edit', edit_guest_path(@guest) %> |
+  <%= link_to 'Back', guests_path %>
 </div>
