@@ -30,7 +30,7 @@
       <% @dinners.each do |dinner| %>
         <table id="dinnerList" class="row">
           <tr class="col-md-3 col-sm-3 col-xs-3">
-            <div><%= link_to(dinner.title, dinner, {:class=> "dinner_link_style"}) %></div>
+            <div class="dinnerName"><%= link_to(dinner.title, dinner, {:class=> "dinner_link_style"}) %></div>
             <div id="date"> Date: <%= dinner.date %></div>
 
           </tr>
@@ -50,7 +50,6 @@
       <% end %>
     </div>
   </div>
-  <a class="btn btn-success btn-lg" href="/guests/new">Sign up</a>
 </div>
 
 <br>
