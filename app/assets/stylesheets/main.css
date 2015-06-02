@@ -64,6 +64,11 @@ img {
   font-weight: 100;
 }
 
+.dinnerInfo .alignbottom{
+  vertical-align: bottom
+}
+
+/*RIGHT WINDOW*/
 #dinenrContainer {
   border:10px;
   border-color: red;
@@ -77,6 +82,9 @@ img {
   font-weight: 200;
 }
 
+.dinnerRow .dinnerName {
+  font-size: 20px;
+}
 
 
 .container {
@@ -92,6 +100,9 @@ img {
 
 
 .dinnerRow {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
   background-color: rgba(255,255,255,.25);
   margin: 5;
 
