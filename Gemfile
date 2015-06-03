@@ -29,6 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc # bundle exec rake doc:rails generates the A
 gem 'better_errors' # the error page is a little easier to read
 
 gem 'figaro' # stores secret stuff
+gem 'mail' # Help with production mail via sendgrid
 
 group :development, :test do
   gem 'sqlite3' # Use sqlite3 as the database for Active Record

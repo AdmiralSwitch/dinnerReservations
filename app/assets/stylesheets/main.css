@@ -2,7 +2,7 @@
 .navbar-custom {
   background-color:#d8d8d8;
   border-radius:0;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Muli', cursive;
 }
 
 .navbar-custom .navbar-nav > li > a {
@@ -14,7 +14,7 @@
     background-color:transparent;
 }
 .navbar-custom .navbar-brand {
-  font-family: 'Poiret One', cursive;
+  font-family: 'Muli', cursive;
   font-size: 24pt;
   background-color: transparent;
 
@@ -55,12 +55,12 @@ img {
 }
 
 #dinnerInfo h1 {
-  font-family: 'Poiret One', cursive;
+  font-family: 'Muli', cursive;
   font-weight: 400;
 }
 
 #dinnerInfo h3 {
-  font-family: 'Poiret One', cursive;
+  font-family: 'Muli', cursive;
   font-weight: 100;
 }
 
@@ -78,7 +78,7 @@ img {
 }
 
 #dinenrContainer h2 {
-  font-family: 'Poiret One', cursive;
+  font-family: 'Muli', cursive;
   font-weight: 200;
 }
 
