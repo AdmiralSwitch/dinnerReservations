@@ -236,7 +236,6 @@ DEPENDENCIES
   formtastic
   jbuilder (~> 2.0)
   jquery-rails
-  mail
   pg
   polyamorous
   rails (= 4.2.0)
