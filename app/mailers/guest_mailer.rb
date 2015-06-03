@@ -1,5 +1,5 @@
 class GuestMailer < ApplicationMailer
-  default :from => "admiralswitch@gmail.com"
+  default :from => "grdn2table@gmail.com"
 
   def registration_confirmation(guest)
     @guest = guest

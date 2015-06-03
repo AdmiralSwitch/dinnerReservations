@@ -78,9 +78,9 @@ Rails.application.configure do
 
 
   # vvv Noted out mailer for current version.vvv
-  # config.action_mailer.default_url_options = { :host => 'www.sendgrid.net'}
+  config.action_mailer.default_url_options = { :host => 'www.sendgrid.net'}
 
-  # config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
   :address        => 'smtp.sendgrid.net',
   :port           => '587',
