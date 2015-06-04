@@ -1,61 +1,59 @@
 <p id="notice"><%= notice %></p>
 
 <!-- THIS IS WHERE THE IMAGES ARE -->
-<div class="headerpics">
-  <div class="row">
-    <div>
-      <img class="col-xs-8 col-md-8" src="https://c1.staticflickr.com/9/8835/17765717258_5eb870f79b_z.jpg" />
-      <img class="col-xs-4 col-md-4" src="http://www.fillmorestreetsf.com/wp-content/blogs.dir/198/files/2011/11/womens-community-clinic.png" />
-    </div>
+<!-- <div class="col-xs-8 col-md-8">
+  <div class="headerpics">
+
   </div>
-</div>
+</div> -->
 
 
 <!-- GENERAL INFO ABOUT DINNERS -->
-<div id="dinnerInfo" class="col-xs-8 col-md-8">
-  <h1>Garden to Table Dinner Series</h1>
-  <h3>A benefit for Women's Community Clinic</h3>
-  <div>
-    Family style dinners inspired by backyard garden.
-    <p>Location: 1014 57th St. Oakland, CA. 94608</p>
+<div id="infoanddinners" class="row">
+  <div id="dinnerInfo" class="col-xs-8 col-md-8">
+    <h1>Garden to Table Dinner Series</h1>
+      <h3>A benefit for Women's Community Clinic</h3>
+      <div>
+        Family style dinners inspired by backyard garden.
+        <p>Location: 1014 57th St. Oakland, CA. 94608</p>
+      </div>
+      <br>
+      <div class="alignbottom">
+        Learn more about the
+        <a href="http://www.womenscommunityclinic.org/">Women's Community Clinic</a>.
+      </div>
   </div>
-  <br>
-  <div class="alignbottom">
-    Learn more about the
-    <a href="http://www.womenscommunityclinic.org/">Women's Community Clinic</a>.
-  </div>
-</div>
 
-<!-- LIST OF DINNERS AND ATTENDEES -->
-<div id="dinenrContainer" class="col-xs-4 col-md-4">
-  <h2>Dinners</h2>
-  <div>
-    <div class="dinnerRow">
-      <% @dinners.each do |dinner| %>
-        <table id="dinnerList" class="row">
-          <tr class="col-md-3 col-sm-3 col-xs-3">
-            <div class="dinnerName"><%= link_to(dinner.title, dinner, {:class=> "dinner_link_style"}) %></div>
-            <div id="date"> Date: <%= dinner.date %></div>
+  <!-- LIST OF DINNERS AND ATTENDEES -->
+  <div id="dinenrContainer" class="col-xs-4 col-md-4">
+    <h2>Dinners</h2>
+    <div>
+      <div class="dinnerRow">
+        <% @dinners.each do |dinner| %>
+          <table id="dinnerList" class="row">
+            <tr class="col-md-3 col-sm-3 col-xs-3">
+              <div class="dinnerName"><%= link_to(dinner.title, dinner, {:class=> "dinner_link_style"}) %></div>
+              <div id="date"> Date: <%= dinner.date %></div>
 
-          </tr>
-          <!-- <div class="col-md-7 col-sm-7 col-xs-7"> -->
-
-            <tr class="partysize">
-              <% people = dinner.guests.count %>
-              <% if people >= 8 %>
-                <%= "SOLD OUT" %>
-              <% else %>
-                <tr><%='Guests: ' %>
-                <%= people %></tr>
-              <% end %>
             </tr>
-          <!-- </div> -->
-        </table>
-      <% end %>
+            <!-- <div class="col-md-7 col-sm-7 col-xs-7"> -->
+
+              <tr class="partysize">
+                <% people = dinner.guests.count %>
+                <% if people >= 8 %>
+                  <%= "SOLD OUT" %>
+                <% else %>
+                  <tr><%='Guests: ' %>
+                  <%= people %></tr>
+                <% end %>
+              </tr>
+            <!-- </div> -->
+          </table>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
-
 <br>
 
 

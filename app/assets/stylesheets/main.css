@@ -27,31 +27,26 @@
 }
 
 
-/*Pictures*/
-.headerpics{
-  display: inline;
-  height: 250px;
-  width: 750px;
-  position: fixed;
-  z-index: 10;
-
-}
-
-
-img {
-  padding: 5px;
-  height: 250px;
+body {
+  background-image: url(https://c1.staticflickr.com/9/8626/15800870328_f9b0646447_k.jpg);
 }
 
 
 /*LEFT WINDOW*/
-#dinnerInfo {
 
-  height: 500px;
-  background-color: rgba(216,216,216,1);
-  top: 250px;
-  border-color: red;
-  border: 10px;
+#infoanddinners {
+  width: 100%;
+}
+#dinnerPic {
+  filter: blur(1px);
+  background-image: url(https://c1.staticflickr.com/9/8835/17765717258_5eb870f79b_z.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#dinnerInfo {
+  color: white;
+  height: 435px;
+  background-color: rgba(0,0,0,.5);
 }
 
 #dinnerInfo h1 {
@@ -71,10 +66,8 @@ img {
 /*RIGHT WINDOW*/
 #dinenrContainer {
   border:10px;
-  border-color: red;
-  height: 500px;
+  color: white;
   background-color: rgba(67,18,0,.4);
-  top: 250px;
 }
 
 #dinenrContainer h2 {
@@ -88,14 +81,9 @@ img {
 
 
 .container {
-  position: fixed;
+  /*position: fixed;*/
   width: 100%;
   padding-top: 40px;
-  padding-right: 0px;
-  padding-left: 0px;
-  margin: 0px;
-
-
 }
 
 
@@ -114,4 +102,15 @@ img {
 
 a {
   text-decoration: none !important;
+}
+
+/*FOOTER*/
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background-image: url(http://www.gardeningknowhow.com/wp-content/uploads/2014/03/vegetable-garden.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
