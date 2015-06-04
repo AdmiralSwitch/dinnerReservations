@@ -5,36 +5,18 @@
   font-family: 'Muli', cursive;
 }
 
-.navbar-custom .navbar-nav > li > a {
-
-    text-decoration: none;
-}
-.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
-
-    background-color:transparent;
-}
 .navbar-custom .navbar-brand {
   font-family: 'Muli', cursive;
   font-size: 24pt;
   background-color: transparent;
-
   text-decoration: none;
 }
 
-.navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus {
-  text-decoration: none;
-  background-color: #005a22;
-}
 
-
+/*EVERYBODY*/
 body {
   background-image: url(https://c1.staticflickr.com/9/8626/15800870328_f9b0646447_k.jpg);
 }
-
-
-
-
-
 
 img {
   padding: 5px;
@@ -47,15 +29,31 @@ img {
 #infoanddinners {
   width: 100%;
 }
-#dinnerPic {
-  filter: blur(1px);
-  background-image: url(https://c1.staticflickr.com/9/8835/17765717258_5eb870f79b_z.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
+
+/* unvisited link */
+#infoanddinners a:link {
+    color: rgba(142,219,99,1);
 }
+
+/* visited link */
+#infoanddinners a:visited {
+    color: rgba(198,255,166,1);
+}
+
+/* mouse over link */
+#infoanddinners a:hover {
+    color: rgba(159,255,104,1);
+    background-color: transparent;
+}
+
+/* selected link */
+#infoanddinners a:active {
+    color: rgba(142,219,99,1);
+}
+
 #dinnerInfo {
   color: white;
-  height: 440px;
+  height: 100%;
   background-color: rgba(0,0,0,.5);
 }
 
@@ -69,8 +67,8 @@ img {
   font-weight: 100;
 }
 
-.dinnerInfo .alignbottom{
-  vertical-align: bottom
+#dinnerInfo .alignbottom{
+  bottom: 0;
 }
 
 /*RIGHT WINDOW*/
@@ -91,9 +89,9 @@ img {
 
 
 .container {
-  /*position: fixed;*/
-  width: 100%;
+  color: white;
   padding-top: 40px;
+  padding-right: 0px;
 }
 
 
@@ -114,13 +112,40 @@ a {
   text-decoration: none !important;
 }
 
+/*DINNERS DETAILS PAGES*/
+p.text-info {
+  color: white;
+}
+/*universal link*/
+p.lead a:link {
+    color: rgba(142,219,99,1);
+}
+
+/* visited link */
+p.lead a:visited {
+    color: rgba(198,255,166,1);
+}
+
+/* mouse over link */
+p.lead a:hover {
+    color: rgba(159,255,104,1);
+    background-color: transparent;
+}
+
+/* selected link */
+p.lead a:active {
+    color: rgba(142,219,99,1);
+}
+
 /*FOOTER*/
 #footer {
+  border-radius:0;
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 200px;
+  height: 100px;
   background-image: url(http://www.gardeningknowhow.com/wp-content/uploads/2014/03/vegetable-garden.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: -1;
 }

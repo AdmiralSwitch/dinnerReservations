@@ -1,24 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-6">
     <p class="lead"><%= link_to(@dinner.title, @dinner) %></p>
     <p class="text-info"><%= @dinner.date %></p>
     <p class="text-info"><%= @dinner.description %></p>
-  </div>
-  <div class="col-md-8">
+    <br>
     <p><%= image_tag(@dinner.image) %></p>
+    <a class="btn btn-success btn-lg" href="/guests/new">Sign up</a>
   </div>
-</div>
-<a class="btn btn-success btn-lg" href="/guests/new">Sign up</a>
-<br>
 
-<h2>Current Guests</h2>
 
-<div class="col-md-7 col-sm-7">
-  <ul>
-   <% @dinner.guests.each do |guest|  %>
-      <li><%= guest.name %></li>
-    <% end %>
-  </ul>
+
+
+  <div class="col-md-6">
+
+    <br>
+
+  <h2>Current Guests</h2>
+
+
+    <ul>
+     <% @dinner.guests.each do |guest|  %>
+        <li><%= guest.name %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>

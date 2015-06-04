@@ -1,16 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<!-- THIS IS WHERE THE IMAGES ARE -->
-<!-- <div class="col-xs-8 col-md-8">
-  <div class="headerpics">
-
-  </div>
-</div> -->
-
-
 <!-- GENERAL INFO ABOUT DINNERS -->
 <div id="infoanddinners" class="row">
-  <div id="dinnerInfo" class="col-xs-8 col-md-8">
+  <div id="dinnerInfo" class="col-xs-6 col-sm-6 col-md-8">
     <h1>Garden to Table Dinner Series</h1>
       <h3>A benefit for Women's Community Clinic</h3>
       <div>
@@ -25,13 +17,13 @@
   </div>
 
   <!-- LIST OF DINNERS AND ATTENDEES -->
-  <div id="dinenrContainer" class="col-xs-4 col-md-4">
+  <div id="dinenrContainer" class="col-xs-6 col-sm-6 col-md-4">
     <h2>Dinners</h2>
     <div>
       <div class="dinnerRow">
         <% @dinners.each do |dinner| %>
           <table id="dinnerList" class="row">
-            <tr class="col-md-3 col-sm-3 col-xs-3">
+            <tr class="col-md-4 col-sm-4 col-xs-4">
               <div class="dinnerName"><%= link_to(dinner.title, dinner, {:class=> "dinner_link_style"}) %></div>
               <div id="date"> Date: <%= dinner.date %></div>
 
