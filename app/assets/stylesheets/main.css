@@ -32,6 +32,16 @@ body {
 }
 
 
+
+
+
+
+img {
+  padding: 5px;
+  height: 250px;
+}
+
+
 /*LEFT WINDOW*/
 
 #infoanddinners {
@@ -45,7 +55,7 @@ body {
 }
 #dinnerInfo {
   color: white;
-  height: 435px;
+  height: 440px;
   background-color: rgba(0,0,0,.5);
 }
 
