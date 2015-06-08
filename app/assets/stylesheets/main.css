@@ -23,11 +23,19 @@ img {
   height: 250px;
 }
 
+h2 {
+  color: white;
+}
+
 
 /*LEFT WINDOW*/
 
 #infoanddinners {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
+  background-color: rgba(0,0,0,.5);
 }
 
 /* unvisited link */
@@ -54,7 +62,7 @@ img {
 #dinnerInfo {
   color: white;
   height: 100%;
-  background-color: rgba(0,0,0,.5);
+
 }
 
 #dinnerInfo h1 {
@@ -89,9 +97,34 @@ img {
 
 
 .container {
-  color: white;
+  /*color: white;*/
   padding-top: 40px;
   padding-right: 0px;
+}
+
+.container h1, h2, li, label, td, p{
+  color: white;
+}
+
+/*universal link*/
+.container a:link {
+    color: rgba(142,219,99,1);
+}
+
+/* visited link */
+.container a:visited {
+    color: rgba(198,255,166,1);
+}
+
+/* mouse over link */
+.container a:hover {
+    color: rgba(159,255,104,1);
+    background-color: transparent;
+}
+
+/* selected link */
+.container a:active {
+    color: rgba(142,219,99,1);
 }
 
 
@@ -135,6 +168,10 @@ p.lead a:hover {
 /* selected link */
 p.lead a:active {
     color: rgba(142,219,99,1);
+}
+
+.guestlist h2 {
+  color: white;
 }
 
 /*FOOTER*/

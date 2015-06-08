@@ -1,0 +1,55 @@
+<%= form_for(@guest) do |f| %>
+  <% if @guest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@guest.errors.count, "error") %> prohibited this guest from being saved:</h2>
+
+      <ul>
+      <% @guest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <br>
+
+ <!--  <input type="checkbox" name="guest" id="plussone" value="plussone"> +1 guest -->
+
+  <br>
+  <br>
+
+  <div class="field">
+    <div class="field_head">Dinners</div>
+    <table>
+      <tbody>
+        <tr> <%= hidden_field_tag("guest[dinner_ids][]", nil) %>
+          <td><% Dinner.order(:title).each do |dinner| %></td>
+
+          <td>
+            <% people = dinner.guests.count %>
+              <% if people >= 8 %>
+                <label><%= dinner.title %></label>
+                    <%= "Sorry, No seats left." %>
+              <% else %>
+                <label><%= dinner.title %><%= check_box_tag('guest[dinner_ids][]', dinner.id, dinner.in?(@guest.dinners), {class: "checkbox inline"}) %></label>
+              <% end %>
+          </td>
+        <% end %>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

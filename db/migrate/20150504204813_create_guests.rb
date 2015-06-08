@@ -3,6 +3,7 @@ class CreateGuests < ActiveRecord::Migration
     create_table :guests do |t|
       t.string :name
       t.string :email
+      t.boolean :plussone, default: false, null: false
 
       t.timestamps null: false
     end

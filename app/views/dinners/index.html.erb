@@ -32,8 +32,9 @@
 
               <tr class="partysize">
                 <% people = dinner.guests.count %>
+                <% people = people + 1 %>
                 <% if people >= 8 %>
-                  <%= "SOLD OUT" %>
+                  <%= "FULL" %>
                 <% else %>
                   <tr><%='Guests: ' %>
                   <%= people %></tr>

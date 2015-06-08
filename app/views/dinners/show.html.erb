@@ -1,29 +1,36 @@
 <p id="notice"><%= notice %></p>
-
-<div class="row">
-  <div class="col-md-6">
-    <p class="lead"><%= link_to(@dinner.title, @dinner) %></p>
-    <p class="text-info"><%= @dinner.date %></p>
-    <p class="text-info"><%= @dinner.description %></p>
-    <br>
-    <p><%= image_tag(@dinner.image) %></p>
-    <a class="btn btn-success btn-lg" href="/guests/new">Sign up</a>
-  </div>
-
-
+  <div id="infoanddinners">
+  <div class="row">
+    <div class="col-md-6">
+      <p class="lead"><%= link_to(@dinner.title, @dinner) %></p>
+      <p class="text-info"><%= @dinner.date %></p>
+      <p class="text-info"><%= @dinner.description %></p>
+      <br>
+      <p><%= image_tag(@dinner.image) %></p>
+      <a class="btn btn-success btn-lg" href="/guests/new">Sign up</a>
+    </div>
 
 
-  <div class="col-md-6">
-
-    <br>
-
-  <h2>Current Guests</h2>
 
 
-    <ul>
-     <% @dinner.guests.each do |guest|  %>
-        <li><%= guest.name %></li>
-      <% end %>
-    </ul>
+    <div class="col-md-6">
+      <div class="guestlist">
+        <br>
+
+          <h2>Current Guests</h2>
+
+
+          <ul>
+          <% @dinner.guests.each do |guest|  %>
+            <li><%= guest.name %>
+          <% if guest.plussone %>
+            <label> +1 </label>
+          <% end %>
+
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
