@@ -31,8 +31,9 @@
             <!-- <div class="col-md-7 col-sm-7 col-xs-7"> -->
 
               <tr class="partysize">
-                <% people = dinner.guests.count %>
-                <% people = people + 1 %>
+                <% chicken = dinner.guests.where(plussone: true).count %>
+                <% waffles = dinner.guests.count %>
+                <% people = chicken + waffles %>
                 <% if people >= 8 %>
                   <%= "FULL" %>
                 <% else %>
