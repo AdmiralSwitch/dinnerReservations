@@ -12,6 +12,12 @@ permit_params :title, :description, :seats, :date, :image
 #   permitted << :other if resource.something?
 #   permitted
 # end
+  index do
+    column :title
+    column :date
+    column :details
+    actions
+  end
 
 
 end
