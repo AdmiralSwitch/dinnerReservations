@@ -12,6 +12,11 @@ permit_params :name, :email
 #   permitted << :other if resource.something?
 #   permitted
 # end
-
+  index do
+    column :name
+    column :email
+    column :plussone
+    actions
+  end
 
 end
