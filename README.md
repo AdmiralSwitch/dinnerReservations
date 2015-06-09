@@ -14,7 +14,7 @@ Features I'm working on:
   User: admin@example.com
   Password: password
 
-* Guests should be able to add +1 (radio button)
+* ~~Guests should be able to add +1 (radio button)~~
 
 * Box should be auto checked within a specific dinner if a person has clicked on that one.
 
