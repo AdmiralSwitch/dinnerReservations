@@ -78,7 +78,6 @@ Rails.application.configure do
 
 
   # vvv Noted out mailer for current version.vvv
-  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_url_options = { :host => 'www.anything.com'}
 
 
