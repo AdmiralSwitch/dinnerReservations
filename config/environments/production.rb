@@ -78,7 +78,7 @@ Rails.application.configure do
 
 
   # vvv Noted out mailer for current version.vvv
-  config.action_mailer.default_url_options = { :host => 'www.anything.com'}
+  config.action_mailer.default_url_options = { :host => 'www.something.com'}
 
 
   config.action_mailer.delivery_method = :smtp
