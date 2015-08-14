@@ -1,4 +1,4 @@
-class GuestMailer < ApplicationMailer
+class GuestMailer < ApplicationMailer::Base
   default :from => "grdn2table@gmail.com"
 
   def registration_confirmation(guest)
