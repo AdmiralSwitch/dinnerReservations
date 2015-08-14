@@ -12,7 +12,7 @@ gem 'simple_form' # Forms are easier to make.
 gem 'cocoon' # makes it easier to handle nested forms
 
 gem 'rails_12factor' # added for heroku deployment...per heroku
-gem 'puma' # added to speed up processing...per heroku
+# gem 'puma' # added to speed up processing...per heroku
 
 gem 'activeadmin', github: 'gregbell/active_admin' # for creating the admin side of the app
 gem 'polyamorous' # for activeadmin
