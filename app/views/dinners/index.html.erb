@@ -34,7 +34,7 @@
           <table id="dinnerList" class="row">
             <tr class="col-md-4 col-sm-4 col-xs-4">
               <div class="dinnerName"><%= link_to(dinner.title, dinner, {:class=> "dinner_link_style"}) %></div>
-              <div id="date"> Date: <%= dinner.date %></div>
+              <div id="date"> <%= dinner.date.strftime('%A'", " '%B %-d %Y') %></div>
 
             </tr>
             <!-- <div class="col-md-7 col-sm-7 col-xs-7"> -->
@@ -43,11 +43,15 @@
                 <% chicken = dinner.guests.where(plussone: true).count %>
                 <% waffles = dinner.guests.count %>
                 <% people = chicken + waffles %>
-                <% if people >= 8 %>
+                <% if people >= dinner.seats %>
                   <%= "FULL" %>
                 <% else %>
-                  <tr><%='Guests: ' %>
-                  <%= people %></tr>
+                  <div><tr>
+                    <%= 'Remaining Seats: ' %>
+                    <%= dinner.seats - people %>
+
+                  </div></tr>
+
                 <% end %>
               </tr>
             <!-- </div> -->
