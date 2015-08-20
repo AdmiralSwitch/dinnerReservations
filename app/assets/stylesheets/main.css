@@ -178,6 +178,27 @@ p.lead a:active {
   font-size: 20px;
 }
 
+/*NEW GUEST FORM*/
+.checkbox {
+  float: none;
+  margin: 0;
+  width: auto;
+  text-align: left;
+}
+.checkbox {
+  display: block;
+  padding-top: 3px;
+  margin-left: $indent + 20px;
+}
+
+.checkboxbox {
+  background-color: rgba(0,0,0,.5);
+  padding: 2.5px;
+}
+
+.formdinnertitle {
+  padding-left: 10px;
+}
 /*FOOTER*/
 #footer {
   border-radius:0;

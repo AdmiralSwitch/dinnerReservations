@@ -20,26 +20,27 @@
   </div>
   <br>
 
- <!--  <input type="checkbox" name="guest" id="plussone" value="plussone"> +1 guest -->
+  <label><input type="checkbox" name="guest[plussone]" value="1"> +1 guest</label>
 
   <br>
   <br>
 
   <div class="field">
-    <div class="field_head">Dinners</div>
+    <div class="field_head"><h1>Dinners</h1></div>
     <table>
       <tbody>
         <tr> <%= hidden_field_tag("guest[dinner_ids][]", nil) %>
           <td><% Dinner.order(:title).each do |dinner| %></td>
-
+        </tr>
+        <tr>
           <td>
-            <% people = dinner.guests.count %>
-              <% if people >= 8 %>
-                <label><%= dinner.title %></label>
-                    <%= "Sorry, No seats left." %>
-              <% else %>
-                <label><%= dinner.title %><%= check_box_tag('guest[dinner_ids][]', dinner.id, dinner.in?(@guest.dinners), {class: "checkbox inline"}) %></label>
-              <% end %>
+            <% chicken = dinner.guests.where(plussone: true).count %>
+            <% waffles = dinner.guests.count %>
+            <% people = chicken + waffles %>
+            <% if people >= dinner.seats %>
+            <% else %>
+              <span class="checkboxbox"><%= check_box_tag('guest[dinner_ids][]', dinner.id, dinner.in?(@guest.dinners), {class: "checkboxbox"}) %><label class="formdinnertitle"><%= dinner.title %></label></span>
+            <% end %>
           </td>
         <% end %>
         </tr>
@@ -48,8 +49,9 @@
   </div>
 
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= button_tag(type: 'submit', class: "btn btn-success") do %>
+    <i class="icon-ok icon-white"></i> Save
+  <% end %>
 
 <% end %>
+

@@ -5,6 +5,15 @@
   <br>
   <%= f.input :plussone, :as => :boolean, label: "+1 guest" %>
   <br>
+
+
   <%= f.association :dinners, as: :check_boxes %>
-  <%= f.button :submit %>
+
+
+
+  <%= button_tag(type: 'submit', class: "btn btn-success") do %>
+    <i class="icon-ok icon-white"></i> Save
+  <% end %>
 <% end %>
+
+
