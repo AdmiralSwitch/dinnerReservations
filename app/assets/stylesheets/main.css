@@ -179,17 +179,7 @@ p.lead a:active {
 }
 
 /*NEW GUEST FORM*/
-.checkbox {
-  float: none;
-  margin: 0;
-  width: auto;
-  text-align: left;
-}
-.checkbox {
-  display: block;
-  padding-top: 3px;
-  margin-left: $indent + 20px;
-}
+
 
 .checkboxbox {
   background-color: rgba(0,0,0,.5);
